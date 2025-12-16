@@ -2,3 +2,7 @@
 *.log
 registry-data/
 minio-data/
+test-blob.txt
+downloaded-blob.txt
+*.pyc
+__pycache__/

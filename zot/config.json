@@ -1,0 +1,47 @@
+{
+  "distSpecVersion": "1.1.0",
+  "storage": {
+    "rootDirectory": "/data",
+    "gc": true,
+    "gcDelay": "10s",
+    "gcInterval": "10s",
+    "dedupe": false,
+    "storageDriver": {
+      "name": "s3",
+      "region": "us-east-1",
+      "bucket": "zot",
+      "rootdirectory": "/data",
+      "regionendpoint": "http://minio:9000",
+      "secure": false,
+      "skipverify": true,
+      "forcepathstyle": true,
+      "accesskey": "minioadmin",
+      "secretkey": "minioadmin"
+    }
+  },
+  "http": {
+    "address": "0.0.0.0",
+    "port": "5001",
+    "auth": {
+      "bearer": {
+        "realm": "http://127.0.0.1:8001/auth/v1/token",
+        "service": "zot",
+        "cert": "/etc/zot/public.pem"
+      }
+    },
+    "compat": [
+      "docker2s2"
+    ]
+  },
+  "log": {
+    "level": "info"
+  },
+  "extensions": {
+    "search": {
+      "enable": true
+    },
+    "ui": {
+      "enable": true
+    }
+  }
+}
